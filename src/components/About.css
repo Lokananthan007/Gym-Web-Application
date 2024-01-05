@@ -1,0 +1,83 @@
+/* about.css */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+}
+
+#about{
+    width: 100%;
+    min-height: 600px;
+    /* background: linear-gradient(60deg,   #000000, rgb(99, 95, 99) ); */
+    background-color: black;
+}
+#about .row{
+    width: 95%;
+    height: 100%;
+    margin: 0% 2.5% 0% 2.5%;
+}
+#about .col{
+    width: 40%;
+    height: 100%;
+    margin: 7.5% 2.5% 7.5% 2.5%;
+    /* border-style: groove; */
+}
+#about .col img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    margin-top: 25%;
+    background-size: cover;
+    filter: drop-shadow(-20px 20px 8px rgb(141, 136, 137));
+	animation: myAnim 3s ease 0s 1 normal forwards;
+}
+
+#about .col h3{
+    font-size: 40px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-family: 'Hepta+Slab'; 
+    padding-bottom: 2vh;
+    /* color: rgb(58, 255, 216);
+    text-shadow: 2px 1px 3px rgb(152, 255, 255),
+    2px 2px 3px  rgb(255, 152, 152); */
+    background: linear-gradient(to right, rgb(255, 126, 67), #f8ff1e 50%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+#about .col h1{
+    font-size: 60px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-family: 'Hepta+Slab'; 
+    padding-bottom: 2vh;
+    /* color: rgb(217, 91, 255);
+    text-shadow: 2px 1px 3px rgb(152, 255, 255),
+    2px 2px 3px  rgb(255, 152, 152); */
+    background: linear-gradient(to right, rgb(0, 187, 255), #ff1e44 50%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+#about .col p{
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    font-family: 'Hepta+Slab'; 
+    padding-bottom: 2vh;
+    /* color: rgb(91, 178, 255); */
+    background: linear-gradient(to right, rgb(246, 147, 255), #1ef8ff 50%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+#about .col button{
+    animation: myAnim 3s ease 0s 1 normal forwards;
+    margin-left: 30%;
+}

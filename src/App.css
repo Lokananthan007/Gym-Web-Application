@@ -1,38 +1,261 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@800&family=Kanit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,300;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar{
+    width: 100%;
+    background-color: rgb(0, 0, 0,0.5);
+    position: relative;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.navbar .navbar-brand {
+    color: rgb(241, 155, 7) !important;
+    font-weight: bold;
+    margin-left: 5%;
+    text-align: center;
+    font-family: 'Kanit', sans-serif; 
+    font-weight: 500;
+    font-size: 35px;
+}
+.navbar .navbar-brand:hover{
+    color: orange !important;
+}
+.navbar .navbar-brand img{
+    width: 50px;
+    height: 50px;
+    background-color: lightgoldenrodyellow;
+}
+  
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: none;
+    box-shadow: none; 
+}
+#basic-navbar-nav{
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    justify-items: center;
   }
+.navbar a {
+    color: orange !important; 
+    font-family: 'Kanit', sans-serif; 
+    font-weight: 300;
+    font-size: 25px;
+    margin-left: 30px;
+}
+.navbar a:hover{
+    color: lime !important;
+}
+.navbar a.active {
+    color: lime !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#Button{
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    color: orange !important;
+    background-color: rgba(0, 0, 0, 0.386);
+    border: 1.5px solid orange;
+    font-family: 'Kanit', sans-serif; 
+    font-weight: 300;
+    border-radius: 20px;
+    text-transform: uppercase;
+    overflow: hidden;
+    position: relative;
+} 
+#Button::before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent,orange, transparent);
+    transform: translateX(-100%);
+    transition: 0.6s;
+    position: absolute;
+}
+#Button:hover{
+    background: transparent;
+    box-shadow: 0 0 20px 5px orange;
+    background-color: rgba(0, 0, 0, 0.564);
+    border: 1.5px solid orange;
+    color: aliceblue !important;
+}
+#Button:hover::before {
+    transform: translateX(100%);
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+/* Home page */
+.home {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+}
+.home .carousel {
+    width: 100%;
+}
+.home .carousel-item{
+    width: 100%;
+    height: 100%;
+}
+  
+.home .carousel-item img {
+    width: 100%; 
+    height: 800px;
+    transform: scale(1);
+    filter: blur(4px);
+}
+.home .carousel-item.active img {
+    transform: scale(1);
   }
-  to {
-    transform: rotate(360deg);
-  }
+.home .carousel-caption {
+    margin-bottom: 8%;
+    
 }
+.home .carousel-caption h1 {
+    font-size: 100px;
+    letter-spacing: 1px;
+    font-weight: 800;
+    font-family: 'Hepta+Slab'; 
+    color: white;
+    text-shadow: 2px 1px 3px rgb(250, 255, 152),
+    2px 2px 3px  rgb(224, 152, 255);
+    /* background: linear-gradient(to right,  #ff6200, rgb(255, 0, 238) 50%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    animation: myAnim 2s ease-in 0s 1 normal forwards;
+}
+    @keyframes myAnim {
+        0% {
+            animation-timing-function: ease-in;
+            opacity: 1;
+            transform: translateY(-45px);
+        }
+    
+        24% {
+            opacity: 1;
+        }
+    
+        40% {
+            animation-timing-function: ease-in;
+            transform: translateY(-24px);
+        }
+    
+        65% {
+            animation-timing-function: ease-in;
+            transform: translateY(-12px);
+        }
+    
+        82% {
+            animation-timing-function: ease-in;
+            transform: translateY(-6px);
+        }
+    
+        93% {
+            animation-timing-function: ease-in;
+            transform: translateY(-4px);
+        }
+    
+        25%,
+        55%,
+        75%,
+        87% {
+            animation-timing-function: ease-out;
+            transform: translateY(0px);
+        }
+    
+        100% {
+            animation-timing-function: ease-out;
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+.home .carousel-caption h3 {
+    font-size: 80px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-family: 'Hepta+Slab'; 
+    text-shadow: 2px 1px 3px rgb(250, 255, 152),
+    2px 2px 3px  rgb(224, 152, 255);
+    /* background: linear-gradient(to right, #ffffff, #fdf2f9 50%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    animation: myAnim 2s ease-in 0s 1 alternate forwards;
+}
+  
+.home .carousel-caption p {
+    font-size: 30px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    font-family: 'Hepta+Slab'; 
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  font-size: 2rem; 
+  /* margin-top: 23%; */
+}
+
+.carousel-control-prev {
+  width: 100px !important;
+}
+
+.carousel-control-next {
+  width: 100px !important;
+}
+.animated-caption {
+    animation: myAnim 2s ease 0s 1 normal forwards;
+}
+  
+@keyframes myAnim {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 0;
+		transform: translateY(-250px);
+	}
+
+	38% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	55% {
+		animation-timing-function: ease-in;
+		transform: translateY(-65px);
+	}
+
+	72% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	81% {
+		animation-timing-function: ease-in;
+		transform: translateY(-28px);
+	}
+
+	90% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	95% {
+		animation-timing-function: ease-in;
+		transform: translateY(-8px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+}
+
+
