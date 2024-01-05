@@ -3,6 +3,12 @@ import { useState } from 'react';
 import '../components/Contact.css'
 
 function Contact() {
+    const buttonStyle = {
+        width: '180px',
+        height: '50px',
+        fontSize: '25px',
+      };
+
     const [successMessage, setSuccessMessage] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
 
@@ -47,7 +53,7 @@ function Contact() {
                         </div>
                         <div className='data mt-5 mb-5'>
                             <input type='email' placeholder='Your Mail' name='mail' className='ps-3 mt-5' style={{ color: 'white' }} /><br /><br />
-                            <button className='ms-4 mt-5 ps-5 pe-5' onClick={handleSubscribe}>SUBSCRIBE</button>
+                            <button id='Button' style={buttonStyle} className='ms-4 mt-5 ps-4  pe-5' onClick={handleSubscribe}>SUBSCRIBE</button>
                         </div>
                     </div>
                 </div>
